@@ -336,7 +336,7 @@ export default function TodoApp() {
           <div className="space-y-4">
             {/* Task Name Input */}
             <div>
-              <label htmlFor="task-name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="task-name" className="block text-sm font-medium text-black-700 mb-2">
                 Task Name
               </label>
               <input
@@ -345,13 +345,13 @@ export default function TodoApp() {
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
                 placeholder="What needs to be done?"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
 
             {/* Assignee Input */}
             <div>
-              <label htmlFor="assignee" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="assignee" className="block text-sm font-medium text-black-700 mb-2">
                 Assignee
               </label>
               <div className="relative">
@@ -361,7 +361,7 @@ export default function TodoApp() {
                   value={assignee}
                   onChange={(e) => setAssignee(e.target.value)}
                   placeholder="Who is responsible for this task?"
-                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 pl-10 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               </div>
@@ -370,7 +370,7 @@ export default function TodoApp() {
             {/* Date Inputs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="start-date" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="start-date" className="block text-sm font-medium text-black-700 mb-2">
                   Start Date
                 </label>
                 <div className="relative">
@@ -379,14 +379,14 @@ export default function TodoApp() {
                     type="date"
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
-                  <CalendarIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <CalendarIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-black-400" />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="deadline" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="deadline" className="block text-sm font-medium text-black-700 mb-2">
                   Deadline
                 </label>
                 <div className="relative">
@@ -395,30 +395,30 @@ export default function TodoApp() {
                     type="date"
                     value={deadline}
                     onChange={(e) => setDeadline(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
-                  <CalendarIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <CalendarIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-black-400" />
                 </div>
               </div>
             </div>
 
             {/* Tags Dropdown */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black-700 mb-2">
                 Tags
               </label>
               <button
                 type="button"
                 onClick={() => setIsTagDropdownOpen(!isTagDropdownOpen)}
-                className="w-full flex items-center justify-between px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                className="w-full flex items-center justify-between px-4 py-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
               >
-                <span className={selectedTags.length > 0 ? 'text-gray-900' : 'text-gray-500'}>
+                <span className={selectedTags.length > 0 ? 'text-black-900' : 'text-black-500'}>
                   {selectedTags.length > 0 
                     ? `${selectedTags.length} tag${selectedTags.length !== 1 ? 's' : ''} selected`
                     : 'Select tags...'
                   }
                 </span>
-                <ChevronDownIcon className={`w-5 h-5 text-gray-400 transition-transform ${isTagDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDownIcon className={`w-5 h-5 text-black-400 transition-transform ${isTagDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Selected Tags Display */}
@@ -447,7 +447,7 @@ export default function TodoApp() {
 
               {/* Dropdown Menu */}
               {isTagDropdownOpen && (
-                <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                <div className="absolute z-10 w-full mt-1 bg-white border border-black-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                   {AVAILABLE_TAGS.map(tag => (
                     <button
                       key={tag.id}
