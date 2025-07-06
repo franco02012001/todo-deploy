@@ -18,37 +18,37 @@ type FilterType = 'all' | 'pending' | 'in-progress' | 'done';
 type TagFilterType = 'all' | string;
 
 const AVAILABLE_TAGS = [
-  { id: 'work', label: 'Work', color: 'bg-blue-100 text-blue-800' },
-  { id: 'personal', label: 'Personal', color: 'bg-green-100 text-green-800' },
-  { id: 'urgent', label: 'Urgent', color: 'bg-red-100 text-red-800' },
-  { id: 'shopping', label: 'Shopping', color: 'bg-purple-100 text-purple-800' },
-  { id: 'health', label: 'Health', color: 'bg-orange-100 text-orange-800' },
-  { id: 'finance', label: 'Finance', color: 'bg-yellow-100 text-yellow-800' },
+  { id: 'work', label: 'Work', color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' },
+  { id: 'personal', label: 'Personal', color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' },
+  { id: 'urgent', label: 'Urgent', color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' },
+  { id: 'shopping', label: 'Shopping', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' },
+  { id: 'health', label: 'Health', color: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200' },
+  { id: 'finance', label: 'Finance', color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' },
 ];
 
 const STATUS_CONFIG = {
   pending: {
     label: 'Pending',
-    color: 'bg-gray-100 text-gray-800',
+    color: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200',
     icon: ClockIcon,
-    bgColor: 'bg-gray-50',
-    textColor: 'text-gray-600',
+    bgColor: 'bg-gray-50 dark:bg-gray-800',
+    textColor: 'text-gray-600 dark:text-gray-300',
     chartColor: '#6B7280'
   },
   'in-progress': {
     label: 'In Progress',
-    color: 'bg-blue-100 text-blue-800',
+    color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
     icon: PlayIcon,
-    bgColor: 'bg-blue-50',
-    textColor: 'text-blue-600',
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+    textColor: 'text-blue-600 dark:text-blue-400',
     chartColor: '#3B82F6'
   },
   done: {
     label: 'Done',
-    color: 'bg-green-100 text-green-800',
+    color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
     icon: CheckIcon,
-    bgColor: 'bg-green-50',
-    textColor: 'text-green-600',
+    bgColor: 'bg-green-50 dark:bg-green-900/20',
+    textColor: 'text-green-600 dark:text-green-400',
     chartColor: '#10B981'
   }
 };
