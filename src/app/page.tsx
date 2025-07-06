@@ -447,7 +447,6 @@ export default function TodoApp() {
                 </span>
                 <ChevronDownIcon className={`w-5 h-5 text-slate-400 dark:text-slate-500 transition-transform duration-200 ${isTagDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
-
               {/* Selected Tags Display */}
               {selectedTags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-3">
@@ -471,7 +470,6 @@ export default function TodoApp() {
                   })}
                 </div>
               )}
-
               {/* Dropdown Menu */}
               {isTagDropdownOpen && (
                 <div className="absolute z-10 w-full mt-2 bg-white/95 dark:bg-slate-700/95 backdrop-blur-sm border-2 border-slate-200 dark:border-slate-600 rounded-2xl shadow-xl max-h-60 overflow-y-auto">
